@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashbordSoftComponent } from './dashbord-soft/dashbord-soft.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashbordSoftComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
