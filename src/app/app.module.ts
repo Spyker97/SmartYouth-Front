@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashbordSoftComponent } from './dashbord-soft/dashbord-soft.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { EtageComponent } from './etage/etage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashbordSoftComponent,
-    SignInComponent
+    SignInComponent,
+    EtageComponent
   ],
   imports: [
     BrowserModule,
