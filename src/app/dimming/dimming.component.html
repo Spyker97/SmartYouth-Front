@@ -1,0 +1,25 @@
+<!-- smart-home-control.component.html -->
+
+<div class="container"   >
+
+
+  <div class="lamp" [style.background]="getBackgroundColor()" style="margin-left: 35%;margin-bottom: 20px;">
+  
+    <p class="porcentage" >{{ brightness }}%</p>
+  
+  </div>
+
+  <div class="slidecontainer" style="margin-left: 20%;">
+   
+    <input type="range" class="slider" [(ngModel)]="brightness" min="1">
+  </div>
+  <div class="specific-class" [style.background]="getBackgroundColor()">
+    <!-- Your content with the specific class -->
+  </div>
+
+
+
+</div>
+
+
+
