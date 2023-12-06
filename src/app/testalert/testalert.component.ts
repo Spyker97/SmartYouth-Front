@@ -47,4 +47,20 @@ export class TestalertComponent implements OnInit {
     this.dialogRef.open(DimmingComponent);
   }
 
+
+
+  openModel() {
+    const modelDiv = document.getElementById('myModal');
+    if(modelDiv!= null) {
+      modelDiv.style.display = 'block';
+    } 
+  }
+
+  CloseModel() {
+    const modelDiv = document.getElementById('myModal');
+    if(modelDiv!= null) {
+      modelDiv.style.display = 'none';
+    } 
+  }
+
 }

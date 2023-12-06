@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DimmingComponent } from '../dimming/dimming.component';
 
 @Component({
   selector: 'app-lumier',
@@ -17,8 +16,11 @@ export class LumierComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog(){
-    this.dialogRef.open(DimmingComponent);
+  CloseModel() {
+    const modelDiv = document.getElementById('myModal');
+    if(modelDiv!= null) {
+      modelDiv.style.display = 'none';
+    } 
   }
 
 
