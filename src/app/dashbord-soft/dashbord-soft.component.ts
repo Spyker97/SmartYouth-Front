@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './dashbord-soft.component.html',
   styleUrls: ['./dashbord-soft.component.css',
   ]})
+
 export class DashbordSoftComponent implements OnInit {
   private readonly screenWidthThreshold = 1000;
 
@@ -17,7 +18,7 @@ export class DashbordSoftComponent implements OnInit {
     this.redirectToDashboard();
    
   }
-
+  
   
 
   

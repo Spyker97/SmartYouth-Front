@@ -25,13 +25,19 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/css"
+              {
+                "glob": "**/*",
+                "input": "./assets/css/",
+                "output": "/assets/css/"
+              }
               
             ],
             "styles": [
               "src/styles.css",
+
               "node_modules/sweetalert2/dist/sweetalert2.min.css" , 
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
 
             ],
             "scripts": [
@@ -40,6 +46,7 @@
 
 
             ]
+
           },
           "configurations": {
             "production": {

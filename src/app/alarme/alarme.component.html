@@ -1,0 +1,168 @@
+<div class="col-12">
+    <div class="card mb-4">
+      <div class="card-header pb-0" >
+        <h5>Ajouter scenarion</h5>
+        
+      </div>
+      <div class="card-body px-0 pt-0 pb-2" >
+        
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Titre</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entere Title">
+          </div>
+          <!-- boucle , ajouter ADD -->
+          <div *ngFor="let input of inputs; let i = index">
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Etage</label>
+            <!-- boucle etage-->
+            <div class="form-check form-switch ps-0">
+              <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault1" checked>
+              <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" >Etage1</label>
+            </div> 
+  
+              <!-- end boucle -->
+  
+          </div>
+            <div class="form-group">
+                <div class="card mb-4">
+                    <div class="card-body px-0 pt-0 pb-2">
+                      <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0" *ngFor="let inputTem of inputsTem; let i = index">
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-90">Sensor Température</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-90 ps-2">Condition</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Valeur</th>               
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      
+                      <div class="d-flex px-2 py-1">
+                        
+                        <div class="d-flex flex-column justify-content-center">
+                            <select class="form-select" >
+                                <option value="etage1">Température</option>
+                                <option value="etage2">humedité</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                        <div class="d-flex px-2 py-1">
+                            <select class="form-select" >
+                                <option value="etage1">></option>
+                                <option value="etage2">></option>
+                                <option value="etage2">>=</option>
+                                <option value="etage2">>=</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <input type="number" >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button style="border: 0;background-color: white;" (click)="addTempurature()">          <img src="../assets/add.png" class="avatar avatar-sm me-3" alt="xd">
+            </button>
+        </div></div></div>
+            
+            <div class="form-group">
+                <div class="card mb-4">
+                    <div class="card-body px-0 pt-0 pb-2">
+                      <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0" *ngFor="let inputTem of inputsHum; let i = index">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-90">Sensor Humudité</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-90 ps-2">Condition</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Valeur</th>               
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          
+                          <div class="d-flex px-2 py-1">
+                            
+                            <div class="d-flex flex-column justify-content-center">
+                                <select class="form-select" >
+                                    <option value="etage1">Température</option>
+                                    <option value="etage2">humedité</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <div class="d-flex px-2 py-1">
+                                <select class="form-select" >
+                                    <option value="etage1">></option>
+                                    <option value="etage2">></option>
+                                    <option value="etage2">>=</option>
+                                    <option value="etage2">>=</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <input type="number" >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button style="border: 0;background-color: white;" (click)="addHumedity()">          <img src="../assets/add.png" class="avatar avatar-sm me-3" alt="xd">
+                </button>
+            </div></div></div>
+               
+          <div class="form-group">
+            <label for="exampleInputEmail1">Action</label>
+            <div class="form-check form-switch ps-0">
+              <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" >Climatiseur</label>
+  
+              <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault" checked>
+            </div> 
+            <div class="form-check form-switch ps-0">
+              <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" >Vontilateur</label>
+  
+              <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault" checked>
+            </div> 
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Notification</label>
+            <div class="form-check form-switch ps-0">
+              <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" >Email</label>
+  
+              <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault" checked>
+            </div> 
+            <div class="form-check form-switch ps-0">
+              <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" >SMS</label>
+  
+              <input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault" checked>
+            </div> 
+          </div>
+        </div>
+  
+          
+        
+  
+          <button style="border: 0;background-color: white;" (click)="addInput()">          <img src="../assets/add.png" class="avatar avatar-sm me-3" alt="xd">
+          </button>
+          
+  
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" style="background-color: rgb(16, 218, 40);" type="button">ajouter Alarme</button>
+          </div>
+        </form>
+       
+      </div>
+    </div>
+  </div>
