@@ -25,13 +25,19 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/css"
+              {
+                "glob": "**/*",
+                "input": "./assets/css/",
+                "output": "/assets/css/"
+              }
               
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              
             ],
-            "scripts": ["src/app/dashbord-soft/script.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -5,16 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashbordSoftComponent } from './dashbord-soft/dashbord-soft.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignUPComponent } from './sign-up/sign-up.component';
+import { VentilateurComponent } from './ventilateur-climatiseur/ventilateur.component';
+import { AlarmeComponent } from './alarme/alarme.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashbordSoftComponent,
-    SignInComponent
+    SignInComponent,
+    SignUPComponent,
+    VentilateurComponent,
+    AlarmeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashbord-soft.component.html',
   styleUrls: ['./dashbord-soft.component.css',
   ],
-  animations:['script.js']
+  
 })
 export class DashbordSoftComponent implements OnInit {
 
@@ -13,7 +13,7 @@ export class DashbordSoftComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {
   }
-
+  
   
 
   

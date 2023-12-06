@@ -13,8 +13,9 @@ export class UserService {
   )
   constructor(private httpClient:HttpClient , private userAuthService : UserAuthService) { }
 
-  createClient(client: User): Observable<Object>{
-    return this.httpClient.post(`${this.PATH_OF_API}/auth/register`, client);
+ 
+  public login(loginData : any){
+    return this.httpClient.post(this.PATH_OF_API+"/auth/authenticate" , loginData , {headers : this.requetHeader})
   }
 
 }
