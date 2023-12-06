@@ -1,44 +1,58 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { User } from 'src/app/models/user';
 @Injectable({
   providedIn: 'root'
 })
 export class UserAuthService {
-  public username : string ;
-  public password : string ;
-  constructor(private httpClient : HttpClient) { }
-
-
-  login(username : string , password : string){
-    return this.httpClient.get(  `${environment.hostUrl}/api/v1/login`,
-      { headers: { authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
-        this.username = username;
-        this.password = password;
-        this.registerSuccessfulLogin(username, password);
-      }));
-  }
-
-  createBasicAuthToken(username : string , password : string){
-    return 'Basic' + window.btoa(username+":"+password)
-  }
-  registerSuccessfulLogin(username : string, password :string ){
-    //save to session
-  }
-
-  public login2(username:string , password : string){
-
-    const headers = new HttpHeaders({Authorization :'Basic '+btoa(username+":"+password)});
-    return this.httpClient.get("http://localhost:8898/api/v1/login" , {headers,responseType:'text' as 'json'});
+  public email : string | undefined;
+  public password : string | undefined;
+  constructor() { }
+  public setCurrentUser(user : User){
+    localStorage.setItem('currentUser',JSON.stringify(user));
 
   }
 
-  getUsers() {
-    let username='oussama'
-    let password='admin'
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-   return  this.httpClient.get("http://localhost:8898/api/v1/User",{headers});
+  public getCurrentUser () : User{
+
+    const user = new User();
+    console.log(JSON.parse(this.getMessage(localStorage.getItem('currentUser') || JSON.stringify(user))))
+    return JSON.parse(this.getMessage(localStorage.getItem('currentUser') || JSON.stringify(user)));
+  }
+
+  public setRoles(role:String){
+    localStorage.setItem('roles',JSON.stringify(role));
   }
 
 
+  getMessage(message: string) : string{
+    return message;
+  }
+
+
+  public getRoles(): String {
+    return JSON.parse(this.getMessage(localStorage.getItem('roles') || JSON.stringify(['NO_ROLE'])));
+  }
+  public setToken(jwtToken : string){
+    localStorage.setItem('jwtToken' , jwtToken);
+  }
+
+  public getToken() : string { 
+    return this.getMessage(localStorage.getItem('jwtToken')|| '');
+  }
+
+  public clear(){
+    localStorage.clear();
+  }
+
+  public isLoggedIn() {
+    
+    //(this.getRoles()!= '')&&(
+    if(this.getToken() !=""){
+      return true ;
+    }
+
+    //return this.getRoles() && this.getToken() ;
+    return false ;
+
+  }
 }

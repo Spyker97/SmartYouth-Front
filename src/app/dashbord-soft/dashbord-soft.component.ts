@@ -5,13 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashbord-soft.component.html',
   styleUrls: ['./dashbord-soft.component.css',
   ]})
+
 export class DashbordSoftComponent implements OnInit {
 
   isSidebarToggled: boolean = true;
   constructor() {}
   ngOnInit(): void {
   }
-
+  
   
 
   

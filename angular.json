@@ -25,13 +25,21 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/css"
+              {
+                "glob": "**/*",
+                "input": "./assets/css/",
+                "output": "/assets/css/"
+              }
               
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
+
           },
           "configurations": {
             "production": {
