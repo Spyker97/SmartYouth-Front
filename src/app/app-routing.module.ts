@@ -5,12 +5,20 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUPComponent } from './sign-up/sign-up.component';
 import { VentilateurComponent } from './ventilateur-climatiseur/ventilateur.component';
 import { AlarmeComponent } from './alarme/alarme.component';
+
+import { EtageComponent } from './etage/etage.component';
 const routes: Routes = [
-  {path:'homeDashbord', component:DashbordSoftComponent},
+  {path:'home' , component:DashbordSoftComponent ,children :[
+    {path:'etage' , component:EtageComponent , outlet:'adminbody'}
+
+
+    //{path:'addlivreur' , component:AddLivreurComponent, outlet:'adminbody'}
+  ]},
   {path:'signin', component:SignInComponent},
   {path:'signup', component:SignUPComponent},
   {path:'fan', component:VentilateurComponent},
-  {path:'alarme', component:AlarmeComponent}
+  {path:'alarme', component:AlarmeComponent}  
+
 ];
 
 @NgModule({

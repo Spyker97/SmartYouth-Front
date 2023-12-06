@@ -4,12 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-dashbord-soft',
   templateUrl: './dashbord-soft.component.html',
   styleUrls: ['./dashbord-soft.component.css',
-  ],
-  
-})
+  ]})
+
 export class DashbordSoftComponent implements OnInit {
 
-  isSidebarToggled: boolean = false;
+  isSidebarToggled: boolean = true;
   constructor() {}
   ngOnInit(): void {
   }
