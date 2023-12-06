@@ -36,7 +36,7 @@
                         <span class="badge badge-sm bg-gradient-success"><button (click)="toggleFanStatus()">Toggle</button></span>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <div class="ceiling-container" [@rotateFan]="fans.status ? 'rotate' : 'notRotate'">
+                        <div class="ceiling-container" #ceilingContainer>
                           <div class="ceiling-fan horizontal left"></div>
                           <div class="ceiling-fan horizontal right"></div>
                           <div class="ceiling-fan vertical rotated top"></div>
@@ -72,24 +72,21 @@
                             <img src="../../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">{{ fans.id }}</h6>
+                            <h6 class="mb-0 text-sm">{{ clims.id }}</h6>
                             <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ fans.status ? 'Active' : 'Inactive' }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ clims.status ? 'Active' : 'Inactive' }}</p>
                     </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success"><button (click)="toggleFanStatus()">Toggle</button></span>
+                        <span class="badge badge-sm bg-gradient-success"><button (click)="toggleSnowflake()">Toggle</button></span>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <div class="ceiling-container" [@rotateFan]="fans.status ? 'rotate' : 'notRotate'">
-                          <div class="ceiling-fan horizontal left"></div>
-                          <div class="ceiling-fan horizontal right"></div>
-                          <div class="ceiling-fan vertical rotated top"></div>
-                          <div class="ceiling-fan vertical rotated bottom"></div>
-                        </div>
+                        <div class="col-md-6 col-xs-6">
+                          <span #snowflakeIcon class="fa fa-snowflake big_off air"  ></span><br />
+                      </div>
                       </td>
                     </tr>
                   </tbody>
