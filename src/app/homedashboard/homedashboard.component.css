@@ -1,0 +1,19 @@
+.chart-canvas1{
+    max-width: 400px;
+    max-height: 300px;
+
+}
+.chart-canvas2{
+    max-width: 500px;
+    max-height: 300px;
+
+}
+
+
+.mychart1container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Set the height of the container */
+}
+

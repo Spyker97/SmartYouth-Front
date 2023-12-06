@@ -10,6 +10,18 @@ import { SignUPComponent } from './sign-up/sign-up.component';
 import { VentilateurComponent } from './ventilateur-climatiseur/ventilateur.component';
 import { AlarmeComponent } from './alarme/alarme.component';
 import { EtageComponent } from './etage/etage.component';
+import { LumierComponent } from './lumier/lumier.component';
+import { DimmingComponent } from './dimming/dimming.component';
+import { FormsModule } from '@angular/forms';
+import { TestalertComponent } from './testalert/testalert.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddscenarioComponent } from './addscenario/addscenario.component';
+import { ScenarioComponent } from './scenario/scenario.component';
+import { HomedashboardComponent } from './homedashboard/homedashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -17,18 +29,29 @@ import { EtageComponent } from './etage/etage.component';
     DashbordSoftComponent,
     SignInComponent,
 
+    EtageComponent,
+    LumierComponent,
+    DimmingComponent,
+    TestalertComponent,
+    AddscenarioComponent,
+    ScenarioComponent,
     SignUPComponent,
     VentilateurComponent,
     AlarmeComponent,
-    EtageComponent
+    HomedashboardComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+
     FormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    HttpClientModule,
     ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

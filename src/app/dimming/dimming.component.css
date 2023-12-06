@@ -1,0 +1,106 @@
+.lamp {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    border-radius: 50% 50% 60% 60%;
+    border: 8px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    text-align: center;
+    
+  }
+
+  .porcentage {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .bar {
+    width: 400 px;
+  }
+
+  .lamp:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 0 0 50% 50%;
+  }
+
+  .lamp-filament {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 80px;
+    background-color: #fdd835;
+    border-radius: 50%;
+  }
+
+  .lamp-stand {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 80px;
+    background-color: #a1887f;
+  }
+
+  .lamp-shade {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background-color: #a1887f;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  .slidecontainer {
+    width: 200px;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
