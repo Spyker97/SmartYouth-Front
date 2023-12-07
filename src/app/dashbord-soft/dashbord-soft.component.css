@@ -10863,3 +10863,10 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
 }
+
+
+.sidebaricono {
+  width:30px; /* Adjust the width of your image */
+  height: 30px; /* Adjust the height of your image */
+  margin-right: 10px; /* Add margin to the right of the image */
+}

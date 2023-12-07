@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Simple Sidebar - Start Bootstrap Template</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/SY.png" />
         <!-- Core theme CSS (includes Bootstrap)-->
         
     </head>
@@ -15,7 +15,7 @@
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper" [ngStyle]="getSidebarStyles()">
-                <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+                <div class="sidebar-heading border-bottom bg-light"> <img src="../assets/img/SY.png" class="sidebaricono" >Smart Youth</div>
                 <div class="list-group list-group-flush">
                     <a 
                     [routerLink]="['/home' , {
@@ -35,6 +35,14 @@
 
                     <a [routerLink]="['/home' , {
                         outlets:{
+                            'adminbody':['alarme']
+                        }
+                    }]" 
+                    
+                    class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Alarme</a>
+
+                    <a [routerLink]="['/home' , {
+                        outlets:{
                             'adminbody':['etage']
                         }
                     }]" class="list-group-item list-group-item-action list-group-item-light p-3" >etage 1</a>
@@ -46,7 +54,7 @@
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="min-height: 61.4px;">
                     <div class="container-fluid">
                         <button class="btn btn-primary" id="sidebarToggle" (click)="sideBar($event)">Toggle Menu</button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

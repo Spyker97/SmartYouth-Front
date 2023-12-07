@@ -7,20 +7,21 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Lumier</a>
+          <button (click)="navigate(0)" style="border: none; background: none;">   <a class="nav-link {{active[0]}}" >Lumier</a> </button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+        <button (click)="navigate(1)" style="border: none; background: none;">  <a class="nav-link {{active[1]}} "   >Climatiseur/Fan </a></button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Statistique</a>
+          <button (click)="navigate(2)" style="border: none; background: none;"> <a class="nav-link {{active[2]}} " >Statistique</a> </button>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-  <app-lumier></app-lumier>
-
+  <app-lumier [ngStyle]="navbarstylelumier()"></app-lumier>
+  <app-ventilateur [ngStyle]="navbarstyleclimatiseur()"></app-ventilateur>
+  
 
 
