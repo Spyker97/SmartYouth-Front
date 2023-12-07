@@ -19,8 +19,9 @@ export class SignInComponent implements OnInit {
   loginForm: any;
   constructor(private userAuthService : UserAuthService , private router : Router ,
     private userService : UserService) { }
-
+    isPlaying = false;
   ngOnInit(): void {
+    this.play();
   }
 
   login(loginForm:NgForm){
@@ -47,6 +48,17 @@ export class SignInComponent implements OnInit {
         console.log(error);
       }
     )
+  }
+
+   
+
+  private play() {
+    const video = document.getElementById('myVideo') as HTMLVideoElement;
+
+    if (video) {
+      video.play();
+      this.isPlaying = true;
+    }
   }
  
 }
