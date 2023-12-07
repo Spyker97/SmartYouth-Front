@@ -20,7 +20,8 @@ const routes: Routes = [
     {path:'etage' , component:EtageComponent , outlet:'adminbody'  },
     {path:'dashboard' , component:HomedashboardComponent , outlet:'adminbody'   },
     {path:'scenario' , component:ScenarioComponent , outlet:'adminbody'   },
-    {path:'addscenario' , component:AddscenarioComponent , outlet:'adminbody'  }
+    {path:'addscenario' , component:AddscenarioComponent , outlet:'adminbody'  },
+    {path:'alarme' , component:AlarmeComponent , outlet:'adminbody'  }
 
 
 
@@ -30,9 +31,8 @@ const routes: Routes = [
 
   {path:'dimming', component:DimmingComponent},
   {path:'alert', component:TestalertComponent},
-  {path:'signup', component:SignUPComponent},
-  {path:'fan', component:VentilateurComponent},
-  {path:'alarme', component:AlarmeComponent}  
+  
+  {path:'fan', component:VentilateurComponent}
 
 
 ];

@@ -12,7 +12,6 @@ import { AlarmeComponent } from './alarme/alarme.component';
 import { EtageComponent } from './etage/etage.component';
 import { LumierComponent } from './lumier/lumier.component';
 import { DimmingComponent } from './dimming/dimming.component';
-import { FormsModule } from '@angular/forms';
 import { TestalertComponent } from './testalert/testalert.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AddscenarioComponent } from './addscenario/addscenario.component';
