@@ -19,6 +19,8 @@ import { ScenarioComponent } from './scenario/scenario.component';
 import { HomedashboardComponent } from './homedashboard/homedashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -43,7 +45,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    MatInputModule,
+    MatButtonModule ,
     FormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
