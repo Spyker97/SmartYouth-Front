@@ -13,6 +13,7 @@ import { TestalertComponent } from './testalert/testalert.component';
 import { ScenarioComponent } from './scenario/scenario.component';
 import { AddscenarioComponent } from './addscenario/addscenario.component';
 import { HomedashboardComponent } from './homedashboard/homedashboard.component';
+import { AddalarmeComponent } from './addalarme/addalarme.component';
 const routes: Routes = [
   
 
@@ -21,8 +22,8 @@ const routes: Routes = [
     {path:'dashboard' , component:HomedashboardComponent , outlet:'adminbody'   },
     {path:'scenario' , component:ScenarioComponent , outlet:'adminbody'   },
     {path:'addscenario' , component:AddscenarioComponent , outlet:'adminbody'  },
-    {path:'alarme' , component:AlarmeComponent , outlet:'adminbody'  }
-
+    {path:'alarme' , component:AlarmeComponent , outlet:'adminbody'  },
+    {path :'addalarme', component:AddalarmeComponent , outlet:'adminbody'}
 
 
     //{path:'addlivreur' , component:AddLivreurComponent, outlet:'adminbody'}
@@ -31,7 +32,6 @@ const routes: Routes = [
 
   {path:'dimming', component:DimmingComponent},
   {path:'alert', component:TestalertComponent},
-  
   {path:'fan', component:VentilateurComponent}
 
 
