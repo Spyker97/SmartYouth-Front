@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { AddalarmeComponent } from './addalarme/addalarme.component';
 
 
 
@@ -39,7 +40,8 @@ import { MatButtonModule } from '@angular/material/button';
     SignUPComponent,
     VentilateurComponent,
     AlarmeComponent,
-    HomedashboardComponent
+    HomedashboardComponent,
+    AddalarmeComponent
 
   ],
   imports: [
